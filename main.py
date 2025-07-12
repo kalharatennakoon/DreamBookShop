@@ -46,15 +46,15 @@ class Main:
         try:
             while True:
                 print("\n" + "="*60)
-                print("           📚 DREAM BOOK SHOP - ANALYSIS MENU 📊")
+                print("           DREAM BOOK SHOP - ANALYSIS MENU")
                 print("="*60)
-                print("1. 📈 Show publication trends over time")
-                print("2. 🖊️ Show top 5 most prolific authors")
-                print("3. 🌐 Show language distribution of books")
-                print("4. 🏢 Show number of books published by each publisher")
-                print("5. ❓ Show missing ISBN analysis")
-                print("6. 📅 Show books published per year categorized by language")
-                print("7. 🚪 Exit")
+                print("1. Show publication trends over time")
+                print("2. Show top 5 most prolific authors")
+                print("3. Show language distribution of books")
+                print("4. Show number of books published by each publisher")
+                print("5. Show missing ISBN analysis")
+                print("6. Show books published per year categorized by language")
+                print("7. Exit")
                 print("="*60)
                 
                 try:
@@ -73,14 +73,14 @@ class Main:
                     elif choice == '6':
                         self.analyze_and_visualize_books_per_year_by_language()
                     elif choice == '7':
-                        print("\nThank you for using Dream Book Shop Analysis Tool! 🙏")
+                        print("\nThank you for using Dream Book Shop Analysis Tool!")
                         break
                     else:
                         print("\nInvalid choice! Please enter a number between 1-7.")
                         
                     if choice in ['1', '2', '3', '4', '5', '6']:
                         try:
-                            input("\nPress Enter to continue... 📖")
+                            input("\nPress Enter to continue...")
                         except KeyboardInterrupt:
                             print("\n\nProcess interrupted by user (Ctrl+C)")
                             print("Thank you for using Dream Book Shop Analysis Tool!")
@@ -93,7 +93,7 @@ class Main:
                 except Exception as e:
                     print(f"\nAn error occurred: {e}")
                     try:
-                        input("Press Enter to continue... 📖")
+                        input("Press Enter to continue...")
                     except KeyboardInterrupt:
                         print("\n\nProcess interrupted by user (Ctrl+C)")
                         print("Thank you for using Dream Book Shop Analysis Tool!")
@@ -106,7 +106,7 @@ class Main:
         """Analyze and visualize publication trends over time"""
         try:
             print("\n" + "="*50)
-            print("   📈 PUBLICATION TRENDS OVER TIME")
+            print("   PUBLICATION TRENDS OVER TIME")
             print("="*50)
             
             analysis_data, error = self.analyzer.analyze_publication_trends(self.dataset)
@@ -125,7 +125,7 @@ class Main:
         """Analyze and visualize top prolific authors"""
         try:
             print("\n" + "="*50)
-            print("   🖊️ TOP 5 MOST PROLIFIC AUTHORS")
+            print("   TOP 5 MOST PROLIFIC AUTHORS")
             print("="*50)
             
             analysis_data, error = self.analyzer.analyze_top_authors(self.dataset)
@@ -144,7 +144,7 @@ class Main:
         """Analyze and visualize language distribution"""
         try:
             print("\n" + "="*50)
-            print("   🌐 LANGUAGE DISTRIBUTION")
+            print("   LANGUAGE DISTRIBUTION")
             print("="*50)
             
             analysis_data, error = self.analyzer.analyze_language_distribution(self.dataset)
@@ -163,7 +163,7 @@ class Main:
         """Analyze and visualize books by publisher"""
         try:
             print("\n" + "="*50)
-            print("   🏢 BOOKS BY PUBLISHER")
+            print("   BOOKS BY PUBLISHER")
             print("="*50)
             
             analysis_data, error = self.analyzer.analyze_books_by_publisher(self.dataset)
@@ -182,7 +182,7 @@ class Main:
         """Analyze missing ISBN data and display only in terminal"""
         try:
             print("\n" + "="*50)
-            print("   ❓ MISSING ISBN ANALYSIS")
+            print("   MISSING ISBN ANALYSIS")
             print("="*50)
             
             analysis_data, error = self.analyzer.analyze_missing_isbn(self.dataset)
@@ -252,7 +252,7 @@ class Main:
         """Analyze and visualize books per year by language"""
         try:
             print("\n" + "="*50)
-            print("   📅 BOOKS PER YEAR BY LANGUAGE")
+            print("   BOOKS PER YEAR BY LANGUAGE")
             print("="*50)
             
             analysis_data, error = self.analyzer.analyze_books_per_year_by_language(self.dataset)
@@ -277,9 +277,9 @@ if __name__ == "__main__":
         app = Main()
         app.run()
     except KeyboardInterrupt:
-        print("\n\nApplication interrupted by user (Ctrl+C) ❌")
-        print("Thank you for using Dream Book Shop Analysis Tool! 🙏")
+        print("\n\nApplication interrupted by user (Ctrl+C)")
+        print("Thank you for using Dream Book Shop Analysis Tool!")
         sys.exit(0)
     except Exception as e:
-        print(f"\nUnexpected error: {e} ⚠️")
+        print(f"\nUnexpected error: {e}")
         sys.exit(1)
