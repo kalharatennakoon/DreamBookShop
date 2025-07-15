@@ -11,6 +11,7 @@ from test_analyzer import TestAnalyzer
 from test_visualizer import TestVisualizer
 from test_main import TestMain
 from test_cli import TestCLI
+from test_comprehensive_analysis import TestComprehensiveAnalysis
 
 def create_test_suite():
     """Create a comprehensive test suite for all components"""
@@ -22,7 +23,8 @@ def create_test_suite():
         TestAnalyzer,
         TestVisualizer,
         TestMain,
-        TestCLI
+        TestCLI,
+        TestComprehensiveAnalysis  # Added comprehensive analysis tests
     ]
     
     for test_class in test_classes:
