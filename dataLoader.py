@@ -51,5 +51,3 @@ class DataLoader:
         except Exception as e:
             print(f"Error loading file '{file_path}': {e}")
             return None
-
-
