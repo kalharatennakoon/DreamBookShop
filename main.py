@@ -53,7 +53,7 @@ class Main:
                 print("3. Show language distribution of books")
                 print("4. Show number of books published by each publisher")
                 print("5. Show missing ISBN analysis")
-                print("6. Show books published per year categorized by language")
+                print("6. Show books published per year categorized by language (first 1000 records)")
                 print("7. Exit")
                 print("="*60)
                 
@@ -252,7 +252,7 @@ class Main:
         """Analyze and visualize books per year by language"""
         try:
             print("\n" + "="*50)
-            print("   BOOKS PER YEAR BY LANGUAGE")
+            print("   BOOKS PER YEAR BY LANGUAGE (FIRST 1000 RECORDS)")
             print("="*50)
             
             analysis_data, error = self.analyzer.analyze_books_per_year_by_language(self.dataset)

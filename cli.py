@@ -73,7 +73,7 @@ Examples:
         parser.add_argument(
             '--year-language', '-yl',
             action='store_true',
-            help='Show books per year categorized by language'
+            help='Show books per year categorized by language (first 1000 records only)'
         )
         
         # Output options
@@ -161,7 +161,7 @@ Examples:
                     
             elif analysis_type == 'year-language':
                 print("\n" + "="*50)
-                print("   BOOKS PER YEAR BY LANGUAGE")
+                print("   BOOKS PER YEAR BY LANGUAGE (FIRST 1000 RECORDS)")
                 print("="*50)
                 analysis_data, error = self.main_app.analyzer.analyze_books_per_year_by_language(dataset)
                 if error:

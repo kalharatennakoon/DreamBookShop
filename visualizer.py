@@ -352,7 +352,7 @@ class Visualizer:
             return
         
         # Print summary first (removed redundant title)
-        print(f"\nBooks Per Year by Language Summary:")
+        print(f"\nBooks Per Year by Language Summary (First 1000 records only):")
         for year in analysis_data['years']:
             print(f"\n   {int(year)}:")
             for lang in analysis_data['languages']:
@@ -366,7 +366,7 @@ class Visualizer:
         # Clustered bar chart
         plt.subplot(2, 1, 1)
         year_lang_counts.plot(kind='bar', ax=plt.gca(), figsize=(16, 6), width=0.8)
-        plt.title('Books Published Per Year by Language (Clustered Bar Chart)', fontsize=14, fontweight='bold')
+        plt.title('Books Published Per Year by Language - First 1000 Records (Clustered Bar Chart)', fontsize=14, fontweight='bold')
         plt.xlabel('Year', fontsize=12)
         plt.ylabel('Number of Books', fontsize=12)
         plt.xticks(rotation=45)
@@ -385,7 +385,7 @@ class Visualizer:
         plt.subplot(2, 1, 2)
         sns.heatmap(year_lang_counts.T, annot=True, fmt='d', cmap='YlOrRd', 
                    cbar_kws={'label': 'Number of Books'})
-        plt.title('Books by Year and Language (Heatmap)', fontsize=14, fontweight='bold')
+        plt.title('Books by Year and Language - First 1000 Records (Heatmap)', fontsize=14, fontweight='bold')
         plt.xlabel('Year', fontsize=12)
         plt.ylabel('Language', fontsize=12)
         

@@ -189,8 +189,8 @@ class Analyzer:
     
     def analyze_books_per_year_by_language(self, df):
         """Analyze books published per year categorized by language"""
-        # Use all records for analysis
-        df = self.limit_dataset(df, n=None)
+        # Use only the first 1000 records for analysis
+        df = self.limit_dataset(df, n=1000)
         
         # Check for publication date column
         date_columns = ['publication_date', 'publication date', 'date', 'year']
